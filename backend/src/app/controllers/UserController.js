@@ -3,7 +3,7 @@ import User from '../models/User';
 class UserController {
   async store(req, res) {
     // User registration
-    const userExists = await User.findOne({ where: { email: req.body.email } }); // verifica antes de cadastrar o usuario se ja existe algum email igual na base de dados
+    const userExists = await User.findOne({ where: { email: req.body.email } }); // check before registering the user if there is already an equal email in the database
 
     if (userExists) {
       return res.status(400).json({ error: 'User already exists.' });
@@ -27,7 +27,7 @@ class UserController {
     if (email && email !== user.email) {
       const userExists = await User.findOne({
         where: { email },
-      }); // verifica antes de atualizar o usuario se ja existe algum email igual na base de dados
+      }); // check if there is already an equal email in the database before updating the user
 
       if (userExists) {
         return res.status(400).json({ error: 'User already exists.' });

@@ -1,9 +1,23 @@
 import { Router } from 'express';
 
+// import User from './app/models/User';
+
+import UserController from './app/controllers/UserController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ message: ' Hello Bootcamp!!! ' }));
+routes.post('/users', UserController.store);
 
+/* routes.get('/', async (req, res) => {
+  const user = await User.create({
+    name: 'Danilo Pereira',
+    email: 'danilopx@gmail.com',
+    password_hash: '1231423',
+  });
+
+  return res.json(user);
+});
+*/
 export default routes;
 
 // *********** Atalhos ******************************

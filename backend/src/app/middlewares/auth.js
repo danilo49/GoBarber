@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken';
-import { promisify } from 'util';
+import jwt from 'jsonwebtoken'; // JWT authentication
+import { promisify } from 'util'; // standard node library, convert the callback function to a function that can be worked in asynchronous mode
 import authConfig from '../../config/auth';
 
 export default async (req, res, next) => {

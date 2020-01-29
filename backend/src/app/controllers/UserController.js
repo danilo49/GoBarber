@@ -1,7 +1,24 @@
+import * as Yup from 'yup'; // validating input data
 import User from '../models/User';
 
 class UserController {
   async store(req, res) {
+    // validating input data
+    const schema = Yup.object().shape({
+      // formart the req.body
+      name: Yup.string().required(),
+      email: Yup.string()
+        .email()
+        .required(),
+      password: Yup.string()
+        .required()
+        .min(6),
+    });
+
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Validation fails' });
+    }
+
     // User registration
     const userExists = await User.findOne({ where: { email: req.body.email } }); // check before registering the user if there is already an equal email in the database
 
@@ -19,6 +36,27 @@ class UserController {
   }
 
   async update(req, res) {
+    const schema = Yup.object().shape({
+      // formart the req.body
+      name: Yup.string(),
+      email: Yup.string().email(),
+      oldPassword: Yup.string().min(6),
+      password: Yup.string()
+        .min(6)
+        .when('oldPassword', (
+          oldPassword,
+          field // When oldPassword is filled in, I want password filling in to be mandatory.
+        ) => (oldPassword ? field.required() : field)), // if oldPassword is filled in, password filling is mandatory, if not, password is not mandatory
+      confirmPassword: Yup.string().when('password', (password, field) =>
+        password ? field.required().oneOf([Yup.ref('password')]) : field
+      ),
+    });
+
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Validation fails' });
+    }
+
+    // user update
     // console.log(reqIuserId);
     const { email, oldPassword } = req.body;
 

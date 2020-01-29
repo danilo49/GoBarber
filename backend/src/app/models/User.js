@@ -1,5 +1,5 @@
 import Sequelize, { Model } from 'sequelize';
-import bcrypt from 'bcryptjs'; // password hash
+import bcrypt from 'bcryptjs'; // password hash cryptography
 
 class User extends Model {
   static init(sequelize) {

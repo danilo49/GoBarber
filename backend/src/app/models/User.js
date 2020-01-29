@@ -26,6 +26,10 @@ class User extends Model {
 
     return this;
   }
+
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash); // Comparing password that the user typed with the password that is registered in the database, with their respective email that is in SessionController
+  }
 }
 
 export default User;

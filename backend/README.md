@@ -8,7 +8,7 @@
   A barber scheduling app that allows users to schedule an appointment with his favorite barber and shows to the barber his agenda for the day.
 </h4>
 
-<!-->
+<!--
   <p align="center">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/lukemorales/gobarber-api.svg">
 

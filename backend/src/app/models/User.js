@@ -27,6 +27,10 @@ class User extends Model {
     return this;
   }
 
+  static associate(models) {
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash); // Comparing password that the user typed with the password that is registered in the database, with their respective email that is in SessionController
   }

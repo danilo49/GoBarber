@@ -18,7 +18,7 @@ const upload = multer(multerConfig);
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
 
-routes.use(authMiddleware); // Middleware GLOBAL as rotas abaixo desta linha passaram pelo middleware
+routes.use(authMiddleware); // Middleware GLOBAL the routes below this line pass through the middleware
 // routes.put('/users', authMiddleware, UserController.update); Middleware LOCAL
 routes.put('/users', UserController.update);
 
@@ -26,6 +26,7 @@ routes.get('/providers', ProviderController.index);
 
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 routes.get('/schedule', ScheduleController.index);
 

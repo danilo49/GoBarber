@@ -1,9 +1,8 @@
-{
-  /* navegação das importacoes apartir de Ctrl click */
+/*{
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
       "~/*": ["*"],
     }
   }
-}
+}*/

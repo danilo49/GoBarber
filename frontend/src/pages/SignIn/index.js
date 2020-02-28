@@ -22,7 +22,7 @@ export default function SignIn() {
 
   function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));
-    console.tron.log(email, password);
+    // console.tron.log(email, password);
   }
 
   return (

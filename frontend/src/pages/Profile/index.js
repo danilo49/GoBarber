@@ -34,7 +34,7 @@ export default function Profile() {
 
         <Input
           type="password"
-          name="olrdPassword"
+          name="oldPassword"
           placeholder="Sua senha atual"
         />
         <Input type="password" name="password" placeholder="Nova senha" />

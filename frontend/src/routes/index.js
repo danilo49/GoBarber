@@ -4,12 +4,11 @@ import { Switch } from 'react-router-dom';
 import Dashboard from '~/pages/Dashboard';
 import NotFound from '~/pages/NotFound';
 import Profile from '~/pages/Profile';
-import Route from '~/routes/Route';
 import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
+import Route from '~/routes/Route';
 
 export default function Routes() {
-  console.tron.error('oktestew');
   return (
     <Switch>
       <Route path="/" exact component={SignIn} />

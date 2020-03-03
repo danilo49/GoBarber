@@ -66,8 +66,6 @@ export default function Dashboard() {
     setDate(addDays(date, 1));
   }
 
-  // api.get('appointments');
-  console.tron.error('oktestew');
   return (
     <Container>
       <header>

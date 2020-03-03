@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Header from '../../../components/Header';
 import { Wrapper } from './styles';
+import Header from '~/components/Header';
 
 export default function DefaultLayout({ children }) {
   // Dashboard
   return (
     <Wrapper>
-      <Header>{children}</Header>
+      <Header />
+      {children}
     </Wrapper>
   );
 }

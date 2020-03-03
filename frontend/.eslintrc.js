@@ -36,16 +36,22 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     'import-helpers/order-imports': [
       'warn',
-      { // example configuration
-        newlinesBetween: 'always',
-        groups: [
-          'module',
-          '/^~/',
-          ['parent', 'sibling', 'index'],
-        ],
-        alphabetize: { order: 'asc', ignoreCase: true },
+      {
+          newlinesBetween: 'always', // new line between groups
+          groups: [
+              'module',
+              '/^~/',
+              ['parent', 'sibling', 'index'],
+          ],
+          alphabetize: { order: 'asc', ignoreCase: true },
       },
-    ],
+  ],
+  "prefer-destructuring": ["error", {
+    "array": true,
+    "object": true
+  }, {
+    "enforceForRenamedProperties": false
+  }]
   },
   settings: { /** navegar apartir do src */
     "import/resolver": {

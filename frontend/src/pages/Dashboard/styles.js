@@ -1,21 +1,55 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  text {
-    color: #eee;
-    display: flex;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-  }
-  img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  max-width: 600px;
+  margin: 50px auto;
 
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+    button {
+      border: 0;
+      background: none;
+    }
+
+    strong {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 15px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-top: 30px;
+  }
+`;
+
+export const Time = styled.li`
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+
+  opacity: ${props => (props.past ? 0.5 : 1)};
+
+  strong {
+    display: block;
+    color: ${props => (props.available ? '#999' : '#7159c1')};
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  span {
+    display: block;
+    margin-top: 3px;
+    color: ${props => (props.available ? '#999' : '#333')};
+    font-weight: ${props => (props.available ? 'normal' : 'bold')};
   }
 `;

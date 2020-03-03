@@ -8,7 +8,7 @@ import { updateProfileSuccess, updateProfileFailure } from './actions';
 export function* updateProfile({ payload }) {
   try {
     const { name, email, avatar_id, ...rest } = payload.data;
-    // console.tron.log('testeeee'.profile);
+
     const profile = {
       name,
       email,
@@ -17,12 +17,15 @@ export function* updateProfile({ payload }) {
     };
 
     const response = yield call(api.put, 'users', profile);
-
-    toast.success('Perfil atualizado com sucesso 🤪');
+    toast.success('Perfil atualizado com sucesso 🤪', {
+      position: toast.POSITION.TOP_CENTER,
+    });
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
-    toast.error('Erro ao atualizar perfil, confira seus dados 😭');
+    toast.error('Erro ao atualizar perfil, confira seus dados 😭', {
+      position: toast.POSITION.TOP_CENTER,
+    });
     yield put(updateProfileFailure());
   }
 }

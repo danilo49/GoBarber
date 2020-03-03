@@ -17,7 +17,9 @@ export function* signIn({ payload }) {
     const { token, user } = response.data;
 
     if (!user.provider) {
-      toast.error('Usuario nao é prestador 😜');
+      toast.error('Usuario nao é prestador 😜', {
+        position: toast.POSITION.TOP_CENTER,
+      });
       return;
     }
 
@@ -27,7 +29,9 @@ export function* signIn({ payload }) {
 
     history.push('/dashboard');
   } catch (err) {
-    toast.error('Falha na autenticação, verifique seus dados🤖');
+    toast.error('Falha na autenticação, verifique seus dados🤖', {
+      position: toast.POSITION.TOP_CENTER,
+    });
     yield put(signFailure());
   }
 }
@@ -44,9 +48,13 @@ export function* signUp({ payload }) {
     });
 
     history.push('/');
-    toast.success('Fornecedor cadastrado!\nBem vindo 😜');
+    toast.success('Fornecedor cadastrado!\nBem vindo 😜', {
+      position: toast.POSITION.TOP_CENTER,
+    });
   } catch (err) {
-    toast.error('Falha no cadastro, verifique seus dados');
+    toast.error('Falha no cadastro, verifique seus dados ', {
+      position: toast.POSITION.TOP_CENTER,
+    });
 
     yield put(signFailure());
   }

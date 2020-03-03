@@ -31,12 +31,13 @@
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
-<!--
-![App Screenshot](https://res.cloudinary.com/danilo49/image/upload/v1564536567/readme_logos/login_pj8pih.jpg)
-![App Screenshot](https://res.cloudinary.com/danilo49/image/upload/v1564536567/readme_logos/schedules_tgpmie.jpg)
-![App Screenshot](https://res.cloudinary.com/danilo49/image/upload/v1564536567/readme_logos/profile_nl7oco.jpg)
-![App Screenshot](https://res.cloudinary.com/danilo49/image/upload/v1564536567/readme_logos/signup_xwdwqm.jpg)
--->
+
+![App Screenshot](https://res.cloudinary.com/danilopereira/image/upload/v1583223714/GoBarber/signIn.png)
+![App Screenshot](https://res.cloudinary.com/danilopereira/image/upload/v1583223714/GoBarber/dashboard.png)
+![App Screenshot](https://res.cloudinary.com/danilopereira/image/upload/v1583223932/GoBarber/signUp.png)
+![App Screenshot](https://res.cloudinary.com/danilopereira/image/upload/v1583223714/GoBarber/profile.png)
+![App Screenshot](https://res.cloudinary.com/danilopereira/image/upload/v1583224171/GoBarber/notFound.png)
+
 
 ## :rocket: Technologies
 

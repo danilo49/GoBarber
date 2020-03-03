@@ -11,13 +11,9 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/danilo49/GoBarber.svg">
   
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/danilo49/GoBarber.svg">
-  
-  <a href="https://www.codacy.com/app/danilo49/GoBarber?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=danilo49/GoBarber&amp;utm_campaign=Badge_Grade">
-    <img alt="Codacy grade" src="https://api.codacy.com/project/badge/Grade/1ca82febe92a47e4a9a03d6621617cc0">
-  </a>
-  
+ 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/danilo49/GoBarber.svg">
-  <a href="https://github.com/lukemorales/gobarber-api/commits/master">
+  <a href="https://github.com/danilo49/GoBarber/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/danilo49/GoBarber.svg">
   </a>
   
@@ -25,7 +21,9 @@
     <img alt="Repository issues" src="https://img.shields.io/github/issues/danilo49/GoBarber.svg">
   </a>
   
-  <img alt="GitHub" src="https://img.shields.io/github/license/danilo49/GoBarber.svg">   
+  <a href="https://github.com/danilo49/GoBarber/blob/master/backend/LICENSE">
+  <img alt="GitHub" src="https://img.shields.io/badge/license-MIT-GREEN">   
+  </a>
 </p>
 
 <p align="center">
